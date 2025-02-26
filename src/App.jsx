@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import FlickeringText from "./components/FlickeringText";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
       {/* 404 Page */}
       <Route path="*" element={<NotFound />} />
+      <Route path="text" element={<FlickeringText text="RABBIT FACTORY" duration={3} />} />
     </Routes>
   );
 }
