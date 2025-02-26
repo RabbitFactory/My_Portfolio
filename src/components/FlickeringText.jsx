@@ -58,7 +58,7 @@ const FlickeringText = ({ text, duration = 3 }) => {
       // **Failsafe: Force-hide any remaining visible letters at the end**
       setTimeout(() => {
         setVisibleLetters(new Array(text.length).fill(false));
-      }, delay + 300);
+      }, delay + 100);
     }, duration * 1000);
 
     return () => intervals.forEach(clearInterval);

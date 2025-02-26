@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
+import ThemeController from "./ThemeController";
 
 const Navbar = () => {
   return (
-    <nav>
+    <div className="flex justify-between">
+      <div>
       <Link className="btn" to="/">Home</Link>
       <Link className="btn" to="/about">About</Link>
       <Link className="btn" to="/dashboard">Dashboard</Link>
       <Link className="btn" to="/text">text</Link>
-    </nav>
+      </div>
+      <div>
+      <ThemeController></ThemeController>
+      </div>
+    </div>
   )
 }
 
