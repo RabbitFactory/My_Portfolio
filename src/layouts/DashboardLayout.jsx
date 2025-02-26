@@ -6,8 +6,8 @@ const DashboardLayout = () => {
     <>
     {/* <Navbar></Navbar> */}
       <div>
-        <Link to="profile">Profile</Link>
-        <Link to="settings">Settings</Link>
+        <Link className="btn" to="profile">Profile</Link>
+        <Link className="btn" to="settings">Settings</Link>
       </div>
 
       <div>
