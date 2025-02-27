@@ -1,15 +1,12 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";  // Keep Navbar if you want
+import Navbar from "../components/Navbar";
 
 function MainLayout() {
   return (
-    <>
+    <div className="flex p-24 gap-10 items-center h-screen w-full">
       <Navbar />
-      <main>
-        <h1>Main Content</h1>
-        <Outlet /> {/* Only renders Home, About, or other pages */}
-      </main>
-    </>
+      <Outlet />
+    </div>
   );
 }
 

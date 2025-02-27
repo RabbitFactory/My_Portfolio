@@ -3,15 +3,16 @@ import ThemeController from "./ThemeController";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between">
-      <div>
-      <Link className="btn" to="/">Home</Link>
-      <Link className="btn" to="/about">About</Link>
-      <Link className="btn" to="/dashboard">Dashboard</Link>
-      <Link className="btn" to="/text">text</Link>
+    <div 
+    className="flex flex-col justify-between gap-5 ">
+      <div className="flex flex-col gap-5">
+        <Link className="btn" to="/">H</Link>
+        <Link className="btn" to="/about">A</Link>
+        <Link className="btn" to="/dashboard">D</Link>
+        <Link className="btn" to="/text">R</Link>
       </div>
       <div>
-      <ThemeController></ThemeController>
+      <ThemeController/>
       </div>
     </div>
   )
