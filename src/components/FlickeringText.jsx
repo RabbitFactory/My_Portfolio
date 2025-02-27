@@ -64,12 +64,13 @@ const FlickeringText = ({ text, duration = 3 }) => {
     return () => intervals.forEach(clearInterval);
   }, [text, duration]);
 
+  // Removed the hard-coded text-black class
   return (
-    <div className="text-4xl font-bold text-black">
+    <div className="text-9xl font-bold">
       {text.split("").map((char, index) => (
         <span
           key={index}
-          className={` ${
+          className={`${
             visibleLetters[index] ? "opacity-100" : "opacity-0"
           }`}
         >
