@@ -10,26 +10,23 @@ import NotFound from "./pages/NotFound";
 import FlickeringText from "./components/FlickeringText";
 
 function App() {
-  return (
-    <Routes>
-      {/* Main Layout for general pages */}
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} /> {/* Home Page */}
-        <Route path="about" element={<About />} /> {/* About Page */}
+	return (
+		<Routes>
+			<Route path="/" element={<MainLayout />}>
+				<Route index element={<Home />} />
+				<Route path="about" element={<About />} />
 
-        {/* Nested Dashboard Layout inside MainLayout */}
-        <Route path="dashboard" element={<DashboardLayout />}>
-          <Route index element={<Dashboard />} />  {/* Default Dashboard */}
-          <Route path="profile" element={<Profile />} /> {/* Profile Page */}
-          <Route path="settings" element={<Settings />} /> {/* Settings Page */}
-        </Route>
-      </Route>
+				<Route path="dashboard" element={<DashboardLayout />}>
+					<Route index element={<Dashboard />} />
+					<Route path="profile" element={<Profile />} />
+					<Route path="settings" element={<Settings />} />
+				</Route>
+			</Route>
 
-      {/* 404 Page */}
-      <Route path="*" element={<NotFound />} />
-      <Route path="text" element={<FlickeringText text="RABBIT FACTORY" duration={3} />} />
-    </Routes>
-  );
+			<Route path="*" element={<NotFound />} />
+			<Route path="text" element={<FlickeringText text="RABBIT FACTORY" duration={3} />} />
+		</Routes>
+	);
 }
 
 export default App;

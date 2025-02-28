@@ -1,6 +1,6 @@
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <div className="text-9xl text-red-500">404 NotFound</div>
   )
 }
 
