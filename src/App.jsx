@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import FlickeringText from "./components/FlickeringText";
+import Socials from "./pages/Socials";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
 				<Route path="about" element={<About />} />
+				<Route path="socials" element={<Socials />} />
 
 				<Route path="dashboard" element={<DashboardLayout />}>
 					<Route index element={<Dashboard />} />
