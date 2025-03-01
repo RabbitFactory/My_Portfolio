@@ -1,6 +1,8 @@
 const NotFound = () => {
   return (
-    <div className="text-9xl text-red-500">404 NotFound</div>
+    <div className="flex justify-center items-center h-screen">
+      <img className="" src="/public/404.png" alt="" />
+    </div>
   )
 }
 

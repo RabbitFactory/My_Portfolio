@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 function MainLayout() {
   return (
-    <div className="flex p-24 gap-10 items-center h-screen w-full">
+    <div className=" md:p-12 lg:p-24 p-5 md:gap-10 gap-2 h-screen w-full md:flex items-center">
       <Navbar />
       <Outlet />
     </div>
