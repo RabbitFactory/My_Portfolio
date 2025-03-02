@@ -49,7 +49,7 @@ function MainLayout() {
 
       {/* Main Content (Navbar + Pages) */}
       <div
-        className={`md:p-12 lg:p-24 p-5 md:gap-10 gap-2 min-h-screen w-full md:flex items-center transition-opacity duration-1000 ${
+        className={`md:p-12 lg:p-24 p-5 md:gap-10 gap-2 min-h-screen md:h-screen w-full md:flex items-center transition-opacity duration-1000 ${
           showContent ? "opacity-100" : "opacity-0"
         }`}
       >

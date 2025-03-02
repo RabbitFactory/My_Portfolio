@@ -1,14 +1,15 @@
+// import Dashboard from "./pages/Dashboard";
+// import Profile from "./pages/Profile";
+// import DashboardLayout from "./layouts/DashboardLayout";
+// import Settings from "./pages/Settings";
+// import FlickeringText from "./components/FlickeringText";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import DashboardLayout from "./layouts/DashboardLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
-// import FlickeringText from "./components/FlickeringText";
 import Socials from "./pages/Socials";
+import Projects from "./pages/Projects";
 
 function App() {
 	return (
@@ -17,16 +18,10 @@ function App() {
 				<Route index element={<Home />} />
 				<Route path="about" element={<About />} />
 				<Route path="socials" element={<Socials />} />
-
-				<Route path="dashboard" element={<DashboardLayout />}>
-					<Route index element={<Dashboard />} />
-					<Route path="profile" element={<Profile />} />
-					<Route path="settings" element={<Settings />} />
-				</Route>
+				<Route path="projects" element={<Projects />} />
 			</Route>
 
 			<Route path="*" element={<NotFound />} />
-			{/* <Route path="text" element={<FlickeringText text="RABBIT FACTORY" duration={3} />} /> */}
 		</Routes>
 	);
 }
