@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const FlickeringText = ({ text, duration = 3 }) => {
   const [visibleLetters, setVisibleLetters] = useState(
@@ -64,7 +65,6 @@ const FlickeringText = ({ text, duration = 3 }) => {
     return () => intervals.forEach(clearInterval);
   }, [text, duration]);
 
-  // Removed the hard-coded text-black class
   return (
     <div className="text-9xl font-bold">
       {text.split("").map((char, index) => (
@@ -79,6 +79,12 @@ const FlickeringText = ({ text, duration = 3 }) => {
       ))}
     </div>
   );
+};
+
+// ✅ Props validation using PropTypes
+FlickeringText.propTypes = {
+  text: PropTypes.string.isRequired,  // Must be a string and required
+  duration: PropTypes.number          // Must be a number (default: 3)
 };
 
 export default FlickeringText;

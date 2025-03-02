@@ -1,11 +1,56 @@
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import FlickeringText from "../components/FlickeringText";
 
 function MainLayout() {
+  const [showContent, setShowContent] = useState(false);
+  const [bgColor, setBgColor] = useState("#FFFFFF"); // Default light mode
+
+  useEffect(() => {
+    // Function to detect the current theme
+    const detectTheme = () => {
+      const theme = document.documentElement.getAttribute("data-theme");
+      setBgColor(theme === "dark" ? "#1D232A" : "#FFFFFF");
+    };
+
+    detectTheme(); // Run once on mount
+    const observer = new MutationObserver(detectTheme);
+
+    // Observe changes in the `data-theme` attribute
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Wait for flickering effect to finish before showing the layout
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 4000); // Match with the FlickeringText duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className=" md:p-12 lg:p-24 p-5 md:gap-10 gap-2 h-screen w-full md:flex items-center">
-      <Navbar />
-      <Outlet />
+    <div className="relative h-screen w-full overflow-hidden" style={{ backgroundColor: bgColor, transition: "background-color 0.3s, opacity 1s ease-in-out"
+    }}>
+      {/* Flickering Text (Full-Screen Overlay) */}
+      {!showContent && (
+        <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: bgColor }}>
+          <FlickeringText text="Rabbit Factory" duration={3} />
+        </div>
+      )}
+
+      {/* Main Content (Navbar + Pages) */}
+      <div
+        className={`md:p-12 lg:p-24 p-5 md:gap-10 gap-2 h-screen w-full md:flex items-center transition-opacity duration-1000 ${
+          showContent ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <Navbar />
+        <Outlet />
+      </div>
     </div>
   );
 }
