@@ -1,7 +1,7 @@
 const Socials = () => {
     return (
       <div className="w-full h-full flex items-center bg-gray-900 p-4">
-        <div className="grid grid-cols-2 lg:grid-cols-6 grid-rows-6 w-full h-full gap-5 p-4">
+        <div className="grid grid-cols-6 grid-rows-6 w-full h-full gap-5 p-4">
          
           <div className="col-span-6 row-span-2 md:col-span-4 md:row-span-6 bg-white rounded-2xl">
             <img className="w-full h-full object-cover rounded-2xl" src="/me.jpg" alt="Profile" />

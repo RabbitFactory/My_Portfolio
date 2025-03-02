@@ -27,24 +27,29 @@ function MainLayout() {
     // Wait for flickering effect to finish before showing the layout
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 4000); // Match with the FlickeringText duration
+    }, 4000); // Match FlickeringText duration
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden" style={{ backgroundColor: bgColor, transition: "background-color 0.3s, opacity 1s ease-in-out"
-    }}>
+    <div
+      className="relative min-h-screen w-full overflow-auto transition-colors duration-300"
+      style={{ backgroundColor: bgColor }}
+    >
       {/* Flickering Text (Full-Screen Overlay) */}
       {!showContent && (
-        <div className="fixed inset-0 flex items-center justify-center z-50" style={{ backgroundColor: bgColor }}>
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50"
+          style={{ backgroundColor: bgColor }}
+        >
           <FlickeringText text="Rabbit Factory" duration={3} />
         </div>
       )}
 
       {/* Main Content (Navbar + Pages) */}
       <div
-        className={`md:p-12 lg:p-24 p-5 md:gap-10 gap-2 h-screen w-full md:flex items-center transition-opacity duration-1000 ${
+        className={`md:p-12 lg:p-24 p-5 md:gap-10 gap-2 min-h-screen w-full md:flex items-center transition-opacity duration-1000 ${
           showContent ? "opacity-100" : "opacity-0"
         }`}
       >
