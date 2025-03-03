@@ -5,7 +5,6 @@ const Button = ({ label }) => {
     <StyledWrapper>
       <button className="ui-btn">
       <span>{label}</span>
-
       </button>
     </StyledWrapper>
   );
@@ -32,7 +31,7 @@ const StyledWrapper = styled.div`
   /* button settings 👆 */
 
   .ui-btn {
-  width: 160px;
+  width: 130px;
     box-sizing: border-box;
     padding: var(--btn-padding);
     display: flex;
