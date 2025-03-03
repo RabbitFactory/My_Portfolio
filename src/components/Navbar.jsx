@@ -11,10 +11,10 @@ const Navbar = () => {
 
       <div className="flex md:flex-col flex-wrap gap-5 my-5 mx-0 justify-center items-center">
         
-        <Link to="/">
+        {/* <Link to="/">
           <Buttons label="Home" />
-        </Link>
-        <Link to="/about">
+        </Link> */}
+        <Link to="/">
           <Buttons label="About" />
         </Link>
         <Link to="/projects">
@@ -23,9 +23,9 @@ const Navbar = () => {
         <Link to="/socials">
           <Buttons label="Socials" />
         </Link>
-        <Link to="/text">
+        {/* <Link to="/text">
           <Buttons label="Error" />
-        </Link>
+        </Link> */}
 
       </div>
       <div>
