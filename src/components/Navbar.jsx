@@ -9,13 +9,13 @@ const Navbar = () => {
           <ThemeButton></ThemeButton>
         </div>
 
-      <div className="flex md:flex-col flex-wrap gap-5 m-5 justify-center items-center">
+      <div className="flex md:flex-col flex-wrap gap-5 my-5 mx-0 justify-center items-center">
         
         <Link to="/">
           <Buttons label="Home" />
         </Link>
         <Link to="/about">
-          <Buttons label="About Me" />
+          <Buttons label="About" />
         </Link>
         <Link to="/projects">
           <Buttons label="Projects" />

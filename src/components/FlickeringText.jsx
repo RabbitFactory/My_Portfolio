@@ -66,7 +66,7 @@ const FlickeringText = ({ text, duration = 3 }) => {
   }, [text, duration]);
 
   return (
-    <div className="lg:text-[300px] text-9xl text-center p-10 font-bold ">
+    <div className="lg:text-[300px] md:text-9xl text-5xl text-center font-bold ">
       {text.split("").map((char, index) => (
         <span
           key={index}
