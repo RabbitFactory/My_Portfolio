@@ -51,7 +51,7 @@ const FlickeringText = ({ text, duration = 3 }) => {
           fadeOutStep(); // Recursively call for next batch
         }, delay);
 
-        delay += Math.random() * 500 + 300; // 0.3s - 0.8s interval between removals
+        delay += Math.random() * 500 + 100; // 0.3s - 0.8s interval between removals
       };
 
       fadeOutStep();
@@ -66,7 +66,7 @@ const FlickeringText = ({ text, duration = 3 }) => {
   }, [text, duration]);
 
   return (
-    <div className="text-9xl font-bold">
+    <div className="lg:text-[300px] text-9xl text-center p-10 font-bold ">
       {text.split("").map((char, index) => (
         <span
           key={index}
