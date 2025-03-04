@@ -9,7 +9,7 @@ const Navbar = () => {
           <ThemeButton></ThemeButton>
         </div>
 
-      <div className="flex md:flex-col flex-wrap gap-5 my-5 mx-0 justify-center items-center">
+      <div className="flex md:flex-col flex-wrap justify-center items-center gap-2 my-4">
         
         {/* <Link to="/">
           <Buttons label="Home" />

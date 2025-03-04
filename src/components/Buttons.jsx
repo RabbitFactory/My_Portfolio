@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
   /* button settings 👆 */
 
   .ui-btn {
-  width: 130px;
+  width: 110px;
     box-sizing: border-box;
     padding: var(--btn-padding);
     display: flex;
