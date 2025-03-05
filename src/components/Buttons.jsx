@@ -1,19 +1,14 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const Button = ({ label }) => {
   return (
     <StyledWrapper>
       <button className="ui-btn">
-        <span>{label}</span>
+      <span>{label}</span>
       </button>
     </StyledWrapper>
   );
-};
-
-Button.propTypes = {
-  label: PropTypes.string.isRequired,
-};
+}
 
 const StyledWrapper = styled.div`
   .ui-btn {
@@ -28,12 +23,15 @@ const StyledWrapper = styled.div`
     --hover-btn-color: #FAC921;
     --default-btn-color: #fff;
     --font-size: 16px;
+    /* 👆 this field should not be empty */
     --font-weight: 600;
-    --font-family: Menlo, Roboto Mono, monospace;
+    --font-family: Menlo,Roboto Mono,monospace;
   }
 
+  /* button settings 👆 */
+
   .ui-btn {
-    width: 140px;
+  width: 140px;
     box-sizing: border-box;
     padding: var(--btn-padding);
     display: flex;
@@ -58,46 +56,129 @@ const StyledWrapper = styled.div`
     background: inherit;
   }
 
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+
   .ui-btn:hover, .ui-btn:focus {
     background: var(--btn-default-bg);
     box-shadow: 0px 0px 10px 0px #FAC921;
     border: 2px solid #FAC921;
+    ;
   }
 
   .ui-btn:hover span, .ui-btn:focus span {
     color: var(--hover-btn-color);
   }
 
-  @keyframes chitchat {
-    0% { content: "#"; }
-    5% { content: "."; }
-    10% { content: "^{"; }
-    15% { content: "-!"; }
-    20% { content: "#$_"; }
-    25% { content: "№:0"; }
-    30% { content: "#{+."; }
-    35% { content: "@}-?"; }
-    40% { content: "?{4@%"; }
-    45% { content: "=.,^!"; }
-    50% { content: "?2@%"; }
-    55% { content: "\;1}]"; }
-    60% { content: "?{%:%"; }
-    65% { content: "|{f[4"; }
-    70% { content: "{4%0%"; }
-    75% { content: "'1_0<"; }
-    80% { content: "{0%"; }
-    85% { content: "]>'"; }
-    90% { content: "4"; }
-    95% { content: "2"; }
-    100% { content: ""; }
+  .ui-btn:hover span::before, .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
   }
 
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+
+    5% {
+      content: ".";
+    }
+
+    10% {
+      content: "^{";
+    }
+
+    15% {
+      content: "-!";
+    }
+
+    20% {
+      content: "#$_";
+    }
+
+    25% {
+      content: "№:0";
+    }
+
+    30% {
+      content: "#{+.";
+    }
+
+    35% {
+      content: "@}-?";
+    }
+
+    40% {
+      content: "?{4@%";
+    }
+
+    45% {
+      content: "=.,^!";
+    }
+
+    50% {
+      content: "?2@%";
+    }
+
+    55% {
+      content: "\;1}]";
+    }
+
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+
+    65% {
+      content: "|{f[4";
+      right: 0;
+    }
+
+    70% {
+      content: "{4%0%";
+      right: 0;
+    }
+
+    75% {
+      content: "'1_0<";
+      right: 0;
+    }
+
+    80% {
+      content: "{0%";
+      right: 0;
+    }
+
+    85% {
+      content: "]>'";
+      right: 0;
+    }
+
+    90% {
+      content: "4";
+      right: 0;
+    }
+
+    95% {
+      content: "2";
+      right: 0;
+    }
+
+    100% {
+      content: "";
+      right: 0;
+    }
+  };
   @media (max-width: 480px) {
     .ui-btn {
       width: 110px;
-      font-size: 14px;
     }
+    
   }
-`;
+  `
+
 
 export default Button;

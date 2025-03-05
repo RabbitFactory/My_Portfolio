@@ -206,6 +206,10 @@ const StyledWrapper = styled.div`
   .loader {
     display: inline-block;
     margin: 0 16px;
+  };
+  @media (max-width: 480px) {
+    .loader {
+      margin: 0 6px;
+    }
   }`;
-
 export default Loader;
