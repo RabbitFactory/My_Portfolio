@@ -6,14 +6,14 @@ const About = () => {
     <div className="w-full h-full bg-[#0000003d] rounded-[16px] p-4 flex items-center">
       <div className="grid grid-cols-12 gap-4 text-black w-full">
 
-        <div className="col-span-12 lg:col-span-5 xl:col-span-3 justify-start items-center  bg-white p-4 rounded-2xl">
+        <div className="col-span-12 lg:col-span-5 xl:col-span-3 justify-start items-center bg-white p-4 rounded-2xl">
           <h1 className="text-xl font-semibold">Md. Solaiman Hossain Shahi</h1>
           
           <p>Web Developer & Designer</p>
         </div>
 
         
-        <div className="col-span-12 lg:col-span-4 xl:col-span-3 bg-white p-4 rounded-2xl ">
+        <div className="col-span-12 lg:col-span-4 xl:col-span-3 bg-white p-4 rounded-2xl">
 
           <div>
             <h2 className="text-xl font-bold">Education</h2>
