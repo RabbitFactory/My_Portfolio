@@ -1,4 +1,30 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: all;
+}
+
+[data-theme="light"] {
+  .custom-reverse {
+    background-color: #E4E6C3;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   }
+  .custom {
+    background-color: #E4E6C3;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+[data-theme="dark"] {
+  .custom-reverse {
+    background-color: #899878;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  }
+  .custom {
+    background-color: #222725;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  }
+}

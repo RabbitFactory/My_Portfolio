@@ -12,7 +12,7 @@ const Button = ({ label }) => {
 
 const StyledWrapper = styled.div`
   .ui-btn {
-    --btn-default-bg: #010314;
+    --btn-default-bg: #121113;
     --btn-padding: 15px 20px;
     --btn-hover-bg: rgb(51, 51, 51);
     --btn-transition: .3s;

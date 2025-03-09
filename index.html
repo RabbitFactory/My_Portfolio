@@ -8,17 +8,18 @@
     <script>
       (function() {
         var savedTheme = localStorage.getItem('theme');
-        
-        if (savedTheme) {
-          document.documentElement.setAttribute('data-theme', savedTheme);
-        } else {
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var initialTheme = prefersDark ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', initialTheme);
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    
+        // Only set localStorage if theme was not saved
+        if (!savedTheme) {
           localStorage.setItem('theme', initialTheme);
         }
       })();
     </script>
+    
   </head>
   <body>
     <div id="root"></div>

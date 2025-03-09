@@ -5,13 +5,13 @@ import FlickeringText from "../components/FlickeringText";
 
 function MainLayout() {
   const [showContent, setShowContent] = useState(false);
-  const [bgColor, setBgColor] = useState("#FFFFFF"); // Default light mode
+  const [bgColor, setBgColor] = useState("#e4e6c3"); // Default light mode
 
   useEffect(() => {
     // Function to detect the current theme
     const detectTheme = () => {
       const theme = document.documentElement.getAttribute("data-theme");
-      setBgColor(theme === "dark" ? "#1D232A" : "#FFFFFF");
+      setBgColor(theme === "dark" ? "#283618" : "#e4e6c3");
     };
 
     detectTheme(); // Run once on mount
@@ -49,7 +49,7 @@ function MainLayout() {
 
       {/* Main Content (Navbar + Pages) */}
       <div
-        className={`min-h-screen lg:h-screen w-full md:flex items-center transition-opacity duration-1000 p-4 lg:p-10 gap-4 lg:gap-10
+        className={`custom min-h-screen lg:h-screen w-full md:flex items-center transition-opacity duration-1000 p-4 lg:p-10 gap-4 lg:gap-10
           ${showContent ? "opacity-100" : "opacity-0"}`}
       >
         <Navbar />

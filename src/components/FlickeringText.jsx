@@ -66,11 +66,13 @@ const FlickeringText = ({ text, duration = 3 }) => {
   }, [text, duration]);
 
   return (
-    <div className="lg:text-[300px] md:text-9xl text-5xl text-center font-bold ">
+    <div className="custom flex justify-center items-center w-full h-full md:text-9xl text-5xl text-center font-bold ">
       {text.split("").map((char, index) => (
         <span
           key={index}
-          className={`${
+          className={`
+            
+            ${
             visibleLetters[index] ? "opacity-100" : "opacity-0"
           }`}
         >
