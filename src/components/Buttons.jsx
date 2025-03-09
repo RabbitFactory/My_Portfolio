@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const Button = ({ label }) => {
   return (
@@ -21,7 +22,7 @@ const StyledWrapper = styled.div`
     --btn-shadow-color: rgba(0, 0, 0, 0.137);
     --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
     --hover-btn-color: #FAC921;
-    --default-btn-color: #fff;
+    --default-btn-color: #F7F7F2;
     --font-size: 16px;
     /* 👆 this field should not be empty */
     --font-weight: 600;
@@ -179,6 +180,9 @@ const StyledWrapper = styled.div`
     
   }
   `
+  Button.propTypes = {
+    label: PropTypes.string.isRequired
+};
 
 
 export default Button;

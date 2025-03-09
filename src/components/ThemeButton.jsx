@@ -14,7 +14,7 @@ const ThemeButton = () => {
   return (
     <StyledWrapper>
       <label className="switch">
-        <input type="checkbox" onChange={toggleTheme} checked={theme === "light"} />
+        <input type="checkbox" onChange={toggleTheme} checked={theme === "dark"} />
         <span className="slider">
           <div className="star star_1" />
           <div className="star star_2" />

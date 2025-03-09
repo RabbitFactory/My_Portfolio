@@ -3,7 +3,9 @@ import { ArrowDownRight } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="w-full h-full bg-[#0000003d] rounded-[16px] p-4 flex items-center ">
+    <div className="w-full h-full 
+    bg-[#52b7883b]
+     rounded-[16px] p-4 flex items-center ">
       <div className="grid grid-cols-12 gap-4 text-black w-full">
 
         <div className="custom-reverse col-span-12 lg:col-span-5 xl:col-span-3 justify-start items-center p-4 rounded-2xl">
